@@ -23,15 +23,24 @@ class Particle:
 
 if __name__ == "__main__":
 
-    options = {0: moveup(), 1: moveright(), 2: movedown(), 3: moveleft()}
+    particles = ["alpha", "beta", "delta", "gamma", "orange", "table", "computerisation"]
 
-    particles = ["alpha, beta, delta"]
     for index in range(len(particles)):
 
         particles[index] = Particle(particles[index])
 
-        numOfMoves = random.randint(0, 11)
+        numOfMoves = random.randint(10, 101)
         for i in range(numOfMoves):
-            movement = random.randint(0, 5)
+            movement = random.randint(0, 4)
 
-            particles[index].Particle(options[movement])()
+            if movement == 0:
+                particles[index].moveup()
+            if movement == 1:
+                particles[index].moveright()
+            if movement == 2:
+                particles[index].movedown()
+            if movement == 3:
+                particles[index].moveleft()
+        
+        particles[index].display()
+        print("")
