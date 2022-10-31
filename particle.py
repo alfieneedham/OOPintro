@@ -16,8 +16,8 @@ class Particle:
         self.x -= 1
 
     def display(self):
-        print("X-Coordinate of", self.name, "=", self.x)
-        print("Y-Coordinate of", self.name, "=", self.y)   
+        print("Y-Coordinate of", self.name, "=", self.y) 
+        print("X-Coordinate of", self.name, "=", self.x)  
 
 
 
